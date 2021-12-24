@@ -1,11 +1,8 @@
+import { Component } from "react";
 import { Nav, Button, FormControl, Form, Navbar } from "react-bootstrap";
-import { BsSearch } from "react-icons/bs";
+import { FiGlobe } from "react-icons/fi";
 
 import "../MyNav/MyNav.css";
-
-const { Component } = require("react");
-const URL =
-  "https://newsapi.org/v2/everything?domains=techcrunch.com,thenextweb.com&apiKey=84d479210d7f42b2a132ddc058f6c7d5";
 
 class MyNav extends Component {
   state = { searchString: "" };
@@ -19,76 +16,38 @@ class MyNav extends Component {
     }
   };
 
-  loadArticles = (category) => {
-    this.props.loadArticles(category);
-  };
-
-  capitalizeFirstLetter = (string) => {
-    return string.charAt(0).toUpperCase() + string.slice(1);
-  };
-
   render() {
     return (
       <>
         <Navbar
-          bg=""
+          bg="bg-dark"
+          variant="dark"
           expand="lg"
-          className="text-dark d-flex justify-content-center"
+          className="nav__bg text-light d-flex justify-content-center"
         >
-          <Navbar.Brand href=""></Navbar.Brand>
+          <Navbar.Brand
+            style={{
+              height: "16vh",
+              width: "26vh",
+            }}
+            href="https://1000logos.net/wp-content/uploads/2017/08/Airbnb-symbol.jpg"
+          ></Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="mr-auto">
-              <Nav.Link href="/" className="nav__link subscribe">
-                Subscribe
+              <Nav.Link className="nav__link mr-5 ml-4">Place to stay</Nav.Link>
+              <Nav.Link className="nav__link mr-5 ml-4">Experiences</Nav.Link>
+              <Nav.Link className="nav__link mr-5 ml-4">
+                online Experiences
               </Nav.Link>
             </Nav>
-
-            <div className="search__box mr-5 mr-sm-2">
-              <input
-                className="search__txt mr-sm-2 search"
-                type="text"
-                aria-label="search"
-                aria-describedby="basic-addon1"
-                placeholder="Search and press enter"
-                onKeyDown={this.searchStringHandler}
-                onChange={this.searchStringHandler}
-                value={this.state.searchString}
-              />
-
-              <BsSearch className="search__btn" />
-            </div>
-            {/*   <input
-              style={{}}
-              placeholder="Search and press enter"
-            <input
-              placeholder="Search for an article"
-              aria-label="search"
-              className="mr-sm-2 search-bar"
-              aria-describedby="basic-addon1"
-              onKeyDown={this.searchStringHandler}
-              onChange={this.searchStringHandler}
-              value={this.state.searchString}
-
-            /> */}
           </Navbar.Collapse>
+          <a variant="primary" className="btn btn-dark become__host__btn">
+            Become a Host
+          </a>
+          <FiGlobe />
         </Navbar>
         <hr />
-        <div>
-          <Navbar bg="" expand="lg" className="navigation">
-            <Nav className="Navigation">
-              {this.props.categories.map((category, i) => (
-                <Nav.Link
-                  key={i}
-                  className="nav__link mr-5 ml-4"
-                  onClick={() => this.loadArticles(category)}
-                >
-                  <h6>{this.capitalizeFirstLetter(category)}</h6>
-                </Nav.Link>
-              ))}
-            </Nav>
-          </Navbar>
-        </div>
       </>
     );
   }
