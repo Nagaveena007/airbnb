@@ -1,12 +1,100 @@
 .become__host__btn:hover {
   border-radius: 1.5rem;
-  background-color: #202020;
+  background-color: #353232;
 }
 .become__host__btn {
   border: none;
-  border-radius: none;
+  border-radius: 1.5rem;
   background-color: transparent;
 }
 .nav__bg {
   background-color: #000000;
+}
+.logo {
+  margin-left: 3.8rem;
+}
+.nav__bar__center {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.profile__btn {
+  background-color: white;
+  margin-right: 3.5rem;
+  min-height: 6vh;
+  border-radius: 1.3rem;
+}
+.person__btn {
+  min-width: 6vh;
+  min-height: 5vh;
+}
+.profile__more__btn {
+  min-width: 3vh;
+  min-height: 2vh;
+  margin-left: 0.1rem;
+}
+.globe__btn {
+  border: none;
+  border-radius: 1.5rem;
+  background-color: transparent;
+  margin-right: 1rem;
+}
+.globe__btn:hover {
+  border-radius: 1.5rem;
+  background-color: #353232;
+}
+.search__box__div {
+  background-color: black;
+  color: white;
+  height: 12vh;
+}
+.search__container {
+  border-radius: 3rem;
+  background-color: white;
+  color: black;
+  height: 8vh;
+  width: 120vh;
+}
+.search__hr__line {
+  border-right: 1px solid #e4dada;
+  height: 4vh;
+}
+
+.search__bar__elements__row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.search__bar__small__text {
+  font-weight: 600;
+}
+.search__text {
+  color: #918a8a;
+  font-weight: 400;
+}
+.search__btn {
+  border-radius: 2rem;
+  border-color: transparent;
+  background-color: #ff385c;
+  color: white;
+  cursor: pointer;
+  font-size: 16px !important;
+  font-weight: 600 !important;
+  font-family: inherit !important;
+  line-height: 16px !important;
+  user-select: auto !important;
+  display: inline-flex !important;
+  padding: 12px !important;
+  position: relative !important;
+  z-index: 1 !important;
+}
+
+.search__inputs {
+  border: none;
+  background-color: none;
+}
+.search__inputs:hover {
+  background-color: #ebebeb;
+  border-radius: 2rem;
 }
