@@ -3,6 +3,8 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { Container, Alert, Button, Spinner } from "react-bootstrap";
 import { Component } from "react";
 import MyNav from "./components/MyNav/MyNav";
+import Inspiration from "./components/Inspiration/Inspiration";
+import Discover from "./components/Discover/Discover";
 
 class App extends Component {
   state = {
@@ -13,15 +15,13 @@ class App extends Component {
     error: false,
     country: "in",
   };
-  componentDidMount = () => {};
-  /*  componentDidUpdate = (prevProps) => {
-
-  }; */
 
   render() {
     return (
       <>
         <MyNav />
+        <Inspiration />
+        <Discover />
       </>
     );
   }

@@ -46,18 +46,23 @@
 .search__box__div {
   background-color: black;
   color: white;
-  height: 12vh;
+  height: 13vh;
 }
 .search__container {
   border-radius: 3rem;
   background-color: white;
   color: black;
-  height: 8vh;
+  height: 9vh;
   width: 120vh;
 }
 .search__hr__line {
-  border-right: 1px solid #e4dada;
   height: 4vh;
+  align-self: center !important;
+  border-right: 1px solid #dddddd !important;
+  -webkit-flex: 0 0 0px !important;
+  -ms-flex: 0 0 0px !important;
+  flex: 0 0 0px !important;
+  height: 32px !important;
 }
 
 .search__bar__elements__row {
@@ -97,4 +102,21 @@
 .search__inputs:hover {
   background-color: #ebebeb;
   border-radius: 2rem;
+  cursor: pointer;
+}
+/* .search__inputs::after {
+  background-clip: padding-box !important;
+  border: 1px solid transparent !important;
+  border-radius: 32px !important;
+  bottom: 0px !important;
+  content: "" !important;
+  left: 0px !important;
+  position: absolute !important;
+  right: 0px !important;
+  top: 0px !important;
+  z-index: 0 !important;
+} */
+#search__hvr {
+  /*   display: flex;
+  flex-direction: row; */
 }
