@@ -8,21 +8,31 @@ import Home from "./components/Home/Home";
 import Demo from "./components/Home/Demo";
 import FooterPart from "./components/FooterPart/FooterPart";
 import Nav1 from "./components/MyNav/Nav";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Navbar from "./components/MyNav/Navbar";
+function App() {
+  return (
+    <>
+      {/*    <MyNav /> */}
+      {/*     <Router>
+        <Navbar />
+        <Switch>
+          <Route path="/" exact />
+        </Switch>
+      </Router> */}
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Navbar />} />
+        </Routes>
+      </BrowserRouter>
+      {/*  <Nav1 /> */}
 
-class App extends Component {
-  render() {
-    return (
-      <>
-        {/*    <MyNav /> */}
-        <Nav1 />
-        {/*  <Demo /> */}
-        <Home />
-        <Inspiration />
-        <Discover />
-        <FooterPart />
-      </>
-    );
-  }
+      <Home />
+      <Inspiration />
+      <Discover />
+      <FooterPart />
+    </>
+  );
 }
 
 export default App;

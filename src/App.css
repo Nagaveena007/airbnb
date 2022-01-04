@@ -1,3 +1,8 @@
+* {
+  font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto,
+    "Helvetica Neue", sans-serif;
+}
+
 .App {
   text-align: center;
   background-image: "./Assets/newspaper.jpg";

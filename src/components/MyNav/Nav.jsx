@@ -1,10 +1,12 @@
 import { Component } from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import React from "react";
 import { Nav, Row, Navbar, Container, Col } from "react-bootstrap";
 import { FiGlobe } from "react-icons/fi";
 import { IoPersonCircleSharp } from "react-icons/io5";
 import { AiOutlineMenu } from "react-icons/ai";
 import { FiSearch } from "react-icons/fi";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { FaUserCircle } from "@fortawesome/free-solid-svg-icons";
 import "../MyNav/MyNav.css";
 
 class Nav1 extends Component {
@@ -17,7 +19,7 @@ class Nav1 extends Component {
           bg="bg-dark"
           variant="dark"
           expand="lg"
-          className="nav__bg d-flex justify-content-around"
+          className="nav__bg d-flex justify-content-around sticky top"
         >
           <Navbar.Brand className="logo">
             <img
@@ -47,7 +49,12 @@ class Nav1 extends Component {
           </a>
           <button className="profile__btn">
             <AiOutlineMenu className="profile__more__btn" />
-            <FontAwesomeIcon icon="fa-duotone fa-circle-user" />{" "}
+
+            <FontAwesomeIcon
+              className="person__btn"
+              /*  icon="fa-duotone fa-circle-user" */
+              icon="FaUserCircle"
+            ></FontAwesomeIcon>
             <IoPersonCircleSharp className="person__btn" />
           </button>
         </Navbar>

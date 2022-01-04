@@ -1,3 +1,7 @@
+* {
+  font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto,
+    "Helvetica Neue", sans-serif;
+}
 .card__deco {
   border-radius: 0.9rem;
   border-color: transparent !important;
@@ -59,7 +63,7 @@
 
 .card__headlines {
   font-weight: bold;
-  font-size: 2.5em;
+  font-size: 2.7em;
   color: white !important;
   line-height: 1;
 }

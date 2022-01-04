@@ -70,7 +70,7 @@ class Discover extends Component {
                 borderRadius: "0.8rem",
               }}
               className="card__deco"
-              src="https://us.123rf.com/450wm/nicoletaionescu/nicoletaionescu1909/nicoletaionescu190900075/131240255-manager-standing-in-a-restaurant-welcoming-customers.jpg"
+              src="https://media.istockphoto.com/photos/without-a-worry-in-the-worldhow-retirement-should-be-picture-id1158818000?b=1&k=20&m=1158818000&s=170667a&w=0&h=nk5NBePZRmKO5uy851_0J_kstspKh1RouDtlVXiv7AY="
               alt="Card image"
             />
             <Card.ImgOverlay className="d-flex ">

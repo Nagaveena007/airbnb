@@ -22,11 +22,13 @@
   background-color: white;
   margin-right: 3.5rem;
   min-height: 6vh;
-  border-radius: 1.3rem;
+  border-radius: 1.5rem;
+  border: none;
 }
 .person__btn {
   min-width: 6vh;
   min-height: 5vh;
+  color: #717171;
 }
 .profile__more__btn {
   min-width: 3vh;
