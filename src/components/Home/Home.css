@@ -1,0 +1,51 @@
+.home__bg {
+  background-color: black;
+  color: white;
+  justify-content: center !important;
+}
+
+.card__btn1 {
+  border-radius: 2rem;
+  width: 142px;
+  height: 50px;
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 500;
+  font-size: large;
+  border-color: transparent;
+  margin-top: 1em;
+  background-color: white !important;
+}
+.card__btn2 {
+  border-radius: 0.5rem;
+  width: 142px;
+  height: 50px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 500;
+  font-size: large;
+  border-color: transparent;
+  margin-top: 1em;
+  background-color: black !important;
+}
+.card__text {
+  margin-left: 40px;
+  margin-bottom: 72px;
+  font-size: xx-large;
+  font-weight: bolder;
+}
+.card__headding {
+  font-weight: bold;
+  font-size: 1.5em;
+}
+.card__headding1 {
+  font-weight: 500;
+  font-size: 3.2em;
+  color: #222222;
+  line-height: 70pt;
+  border: transparent;
+}

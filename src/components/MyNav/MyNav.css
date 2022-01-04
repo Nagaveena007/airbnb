@@ -46,7 +46,7 @@
 .search__box__div {
   background-color: black;
   color: white;
-  height: 13vh;
+  height: 10vh;
 }
 .search__container {
   border-radius: 3rem;
@@ -119,4 +119,7 @@
 #search__hvr {
   /*   display: flex;
   flex-direction: row; */
+}
+.search__inputs::after {
+  background-color: #000000;
 }

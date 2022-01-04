@@ -1,9 +1,19 @@
-#card-img1 {
-  background-color: #d93b30 !important;
-  color: white;
+.card-img1 {
+  border-top-right-radius: 0.8rem;
+  border-top-left-radius: 0.8rem;
+  width: 100%;
 }
-.card {
-  height: 429px;
-  width: 321px;
-  background-color: #d93b30 !important;
+.card__deco {
+  /*   height: 429px;
+  width: 321px; */
+  color: white;
+  border-top-right-radius: 0.5rem;
+  border-top-left-radius: 0.5rem;
+  height: 58vh;
+}
+.container__deco {
+  overflow: hidden;
+  padding-left: 5rem;
+
+  padding-right: 5rem;
 }

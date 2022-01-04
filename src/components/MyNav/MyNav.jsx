@@ -33,7 +33,7 @@ class MyNav extends Component {
           bg="bg-dark"
           variant="dark"
           expand="lg"
-          className="nav__bg d-flex justify-content-around"
+          className="nav__bg d-flex justify-content-around sticky-top"
         >
           <Navbar.Brand className="logo">
             <img
