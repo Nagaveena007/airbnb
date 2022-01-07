@@ -1,22 +1,43 @@
 .navbar {
-  background: #1c2237;
+  background: black;
   height: 80px;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   font-size: 1.2rem;
   position: sticky;
   top: 0;
   z-index: 999;
+  color: white;
 }
-
+.navbar.active {
+  background: rgb(218, 132, 132);
+  color: black !important;
+  background-color: white;
+}
+.logo {
+  margin-left: 3.8rem;
+  background-color: transparent;
+  height: 7vh;
+  width: 15vh;
+  content: url(https://1000logos.net/wp-content/uploads/2017/08/Airbnb-symbol.jpg);
+}
+.logo.active {
+  margin-left: 3.8rem;
+  background-color: transparent;
+  height: 6vh;
+  width: 15vh;
+  content: url(https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Airbnb_Logo_B%C3%A9lo.svg/2560px-Airbnb_Logo_B%C3%A9lo.svg.png);
+}
 .navbar-container {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  align-items: center;
   height: 80px;
+  max-width: 1500px;
 }
 
-.container {
+/* .container {
   z-index: 1;
   width: 100%;
   max-width: 1300px;
@@ -24,7 +45,7 @@
   margin-left: auto;
   padding-right: 50px;
   padding-left: 50px;
-}
+} */
 
 .navbar-logo {
   color: #fff;
@@ -34,6 +55,7 @@
   font-size: 2rem;
   display: flex;
   align-items: center;
+  background-color: transparent;
 }
 
 .navbar-icon {
@@ -59,13 +81,19 @@
 }
 
 .nav-links {
-  color: #fff;
+  color: #fff !important;
   display: flex;
   align-items: center;
-  text-decoration: none;
-  padding: 0.5rem 1rem;
+  padding: 1.5rem 1rem !important;
   height: 100%;
+  font-size: 16px !important;
 }
+
+/* .nav-links:hover {
+  color: #f00946;
+  transform: scale(1.2);
+  transition: all 0.3s ease;
+} */
 
 .fa-bars {
   color: #fff;
@@ -98,19 +126,6 @@
     opacity: 1;
     transition: all 0.6s ease;
     z-index: 1;
-  }
-
-  .nav-links {
-    text-align: center;
-    padding: 2rem;
-    width: 100%;
-    display: table;
-  }
-
-  .nav-links:hover {
-    color: #f00946;
-    transform: scale(1.2);
-    transition: all 0.3s ease;
   }
 
   .nav-item:hover {
@@ -151,3 +166,186 @@
     height: 120px;
   }
 }
+.become__host__btn:hover {
+  border-radius: 1.5rem;
+  background-color: #353232;
+}
+.become__host__btn {
+  border: none;
+  border-radius: 1.5rem;
+  background-color: transparent;
+  color: white;
+  font-size: 14px;
+  font-weight: 500;
+}
+.become__host__btn.active {
+  border-radius: 1.5rem;
+  color: black !important;
+  font-size: 14px;
+  font-weight: 500;
+  background-color: transparent !important;
+}
+.become__host__btn.active:hover {
+  border-radius: 1.5rem;
+  background-color: #353232;
+}
+.nav__bar__center {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.profile__btn {
+  background-color: white;
+  margin-right: 3.5rem;
+  min-height: 6vh;
+  border-radius: 1.5rem;
+  border: none;
+}
+.profile__btn.active {
+  background-color: white;
+  margin-right: 3.5rem;
+  min-height: 6vh;
+  border-radius: 1.5rem;
+  border: 0.2px solid rgb(235, 227, 227);
+}
+.person__btn {
+  min-width: 6vh;
+  min-height: 5vh;
+  color: #717171;
+}
+.profile__more__btn {
+  min-width: 3vh;
+  min-height: 2vh;
+  margin-left: 0.1rem;
+}
+.globe__btn {
+  border: none;
+  border-radius: 1.5rem;
+  background-color: transparent;
+  margin-right: 0.5rem;
+  color: white;
+}
+.globe__btn.active {
+  border: none;
+  border-radius: 1.5rem;
+  background-color: transparent !important;
+  margin-right: 0.5rem;
+  color: black !important;
+}
+.globe__btn:hover {
+  border-radius: 1.5rem;
+  background-color: #353232;
+}
+.globe__btn.active:hover {
+  border-radius: 1.5rem;
+  background-color: #353232;
+}
+.search__box__div__onScroll {
+  margin-top: 30px;
+  color: white;
+  height: 10vh;
+}
+.search__container__onscroll {
+  border-radius: 3rem;
+  background-color: white;
+  color: black;
+  height: 7vh;
+  border: 0.2px solid rgb(235, 227, 227);
+  box-shadow: 0px 2px 12px 1px rgb(235, 227, 227);
+  width: 41vh;
+}
+.search__btn__onscroll {
+  border-radius: 2rem;
+  border-color: transparent;
+  background-color: #ff385c;
+  color: white;
+  cursor: pointer;
+  font-size: 16px !important;
+  font-weight: 600 !important;
+  font-family: inherit !important;
+  line-height: 16px !important;
+  user-select: auto !important;
+  display: inline-flex !important;
+  padding: 6px !important;
+  position: relative !important;
+  z-index: 1 !important;
+}
+.search__box__div {
+  align-items: center;
+  background-color: black;
+  color: white;
+  height: 10vh;
+}
+.search__container {
+  border-radius: 3rem;
+  background-color: white;
+  color: black;
+  height: 9vh;
+  width: 120vh;
+}
+.search__hr__line {
+  height: 4vh;
+  align-self: center !important;
+  border-right: 1px solid #dddddd !important;
+  -webkit-flex: 0 0 0px !important;
+  -ms-flex: 0 0 0px !important;
+  flex: 0 0 0px !important;
+  height: 32px !important;
+}
+
+.search__bar__elements__row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.search__bar__small__text {
+  font-weight: 600;
+}
+.search__text {
+  color: #918a8a;
+  font-weight: 400;
+}
+.search__btn {
+  border-radius: 2rem;
+  border-color: transparent;
+  background-color: #ff385c;
+  color: white;
+  cursor: pointer;
+  font-size: 16px !important;
+  font-weight: 600 !important;
+  font-family: inherit !important;
+  line-height: 16px !important;
+  user-select: auto !important;
+  display: inline-flex !important;
+  padding: 12px !important;
+  position: relative !important;
+  z-index: 1 !important;
+}
+
+.search__inputs {
+  border: none;
+  background-color: none;
+}
+.search__inputs:hover {
+  background-color: #ebebeb;
+  border-radius: 2rem;
+  cursor: pointer;
+}
+/* .search__inputs::after {
+  background-clip: padding-box !important;
+  border: 1px solid transparent !important;
+  border-radius: 32px !important;
+  bottom: 0px !important;
+  content: "" !important;
+  left: 0px !important;
+  position: absolute !important;
+  right: 0px !important;
+  top: 0px !important;
+  z-index: 0 !important;
+} */
+
+.search__inputs::after {
+  background-color: #000000;
+}
+/*end*/
