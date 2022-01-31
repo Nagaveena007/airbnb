@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import "./Navbar.css";
+import Calendar from "react-calendar";
+import "react-calendar/dist/Calendar.css";
 import {
   Nav,
   Navbar,
@@ -9,14 +11,17 @@ import {
   Container,
   Image,
   Button,
+  Modal,
+  Dropdown,
 } from "react-bootstrap";
 import { FiGlobe } from "react-icons/fi";
 import { IoPersonCircleSharp } from "react-icons/io5";
 import { AiOutlineMenu } from "react-icons/ai";
 import { FiSearch } from "react-icons/fi";
+import Nav1 from "./Search";
+import Search from "./Search";
 
 const Navbar1 = () => {
-  let src;
   const navElements = [
     {
       name: "Place to stay",
@@ -28,13 +33,17 @@ const Navbar1 = () => {
       name: "Online Experiences",
     },
   ];
+  const [isUserClicked, setIsUserClicked] = useState(false);
   const [navbar, setNavbar] = useState(false);
   const [logo, setLogo] = useState(false);
   const [globe__btn, setGlobe] = useState(false);
   const [become__host__btn, setHost] = useState(false);
   const [profile__btn, setUser] = useState(false);
   const [isScroll, setIsscroll] = useState(false);
-
+  const [showModal, setShow] = useState(false);
+  const [value, onChange] = useState(new Date());
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
   const changeBackground = () => {
     if (window.scrollY >= 80) {
       setNavbar(true);
@@ -45,12 +54,8 @@ const Navbar1 = () => {
   const changeLogo = () => {
     if (window.scrollY >= 80) {
       setLogo(true);
-      src =
-        "https://1000logos.net/wp-content/uploads/2017/08/Airbnb-symbol.jpg";
     } else {
       setLogo(false);
-      src =
-        "https://logosmarken.com/wp-content/uploads/2020/07/Airbnb-Logo.png";
     }
   };
   const changeGlobe = () => {
@@ -80,6 +85,11 @@ const Navbar1 = () => {
     } else {
       setIsscroll(false);
     }
+  };
+  const handleButtonClick = (e) => {
+    //Call another component here like this
+    //<SomeComponenet id=id/>
+    <Nav1 />;
   };
   window.addEventListener("scroll", changeBackground);
   window.addEventListener("scroll", changeLogo);
@@ -113,6 +123,7 @@ const Navbar1 = () => {
                         <FiSearch
                           className=""
                           style={{ height: "20px", width: "20px" }}
+                          onClick={(e) => handleButtonClick(e)}
                         />
                       </span>
                     </div>
@@ -142,29 +153,49 @@ const Navbar1 = () => {
         <Button className={globe__btn ? "globe__btn active" : "globe__btn"}>
           <FiGlobe />
         </Button>
-        <button
-          className={profile__btn ? "profile__btn active" : "profile__btn"}
-        >
-          <AiOutlineMenu className="profile__more__btn" />
-          <IoPersonCircleSharp className="person__btn" />
-        </button>
+        <Dropdown>
+          <Dropdown.Toggle id="dropdown-basic" alignLeft>
+            <button
+              className={profile__btn ? "profile__btn active" : "profile__btn"}
+            >
+              <AiOutlineMenu className="profile__more__btn" />
+              <IoPersonCircleSharp className="person__btn" />
+            </button>
+          </Dropdown.Toggle>
+          <Dropdown.Menu id="dropdown-menu">
+            <Dropdown.Item className="fontBold" href="#/action-1">
+              Sign Up
+            </Dropdown.Item>
+            <Dropdown.Item href="#/action-1">Log in</Dropdown.Item>
+            <hr />
+            <Dropdown.Item href="#/action-2">Host your home</Dropdown.Item>
+            <Dropdown.Item href="#/action-3">Host an experience</Dropdown.Item>
+            <Dropdown.Item href="#/action-3">Help</Dropdown.Item>
+          </Dropdown.Menu>
+        </Dropdown>
       </Navbar>
-      <div style={{}} className="search__box__div">
+      <Search />
+      {/*  <div style={{}} className="search__box__div">
         <Container className="search__container">
           <Row className="search__bar__elements__row">
-            <Col md={3} className="  mt-1  search__inputs">
+            <Col
+              md={3}
+              className="  mt-1  search__inputs"
+              style={{ borderLeft: "3rem" }}
+            >
               <small className="search__bar__small__text"> Location</small>
               <br />
               <span className="search__text"> Where are you goining?</span>
             </Col>
             <span className="search__hr__line mr-2"></span>
-            <Col md={2} className="mt-1  search__inputs">
+            <Col md={2} className="mt-1  search__inputs" onClick={handleShow}>
               <small className="search__bar__small__text">Check in</small>
               <br />
               <span className="search__text">Add dates</span>
             </Col>
+
             <span className="search__hr__line mr-2"></span>
-            <Col md={3} className="mt-1  search__inputs">
+            <Col md={3} className="mt-1  search__inputs" onClick={handleShow}>
               <small className="search__bar__small__text"> Check out</small>
               <br />
               <span className="search__text">Add dates</span>
@@ -194,6 +225,16 @@ const Navbar1 = () => {
           </Row>
         </Container>
       </div>
+      <Modal
+        className="d-flex justify-content-center"
+        show={showModal}
+        onHide={handleClose}
+      >
+        <Modal.Title className="justify-content-center">Calendar</Modal.Title>
+        <Modal.Body>
+          <Calendar onChange={onChange} value={value} />
+        </Modal.Body>
+      </Modal> */}
     </>
   );
 };

@@ -1,0 +1,76 @@
+.search__hr__line {
+  height: 4vh;
+  align-self: center !important;
+  border-right: 1px solid #dddddd !important;
+  -webkit-flex: 0 0 0px !important;
+  -ms-flex: 0 0 0px !important;
+  flex: 0 0 0px !important;
+  height: 32px !important;
+}
+
+/* from searchbar */
+input {
+  border: none;
+  background-color: rgba(255, 255, 255, 0);
+}
+
+input:focus {
+  outline: none;
+}
+.roundedBorder {
+  border-radius: 50px;
+}
+
+div.roundedBorder:hover {
+  background-color: rgba(184, 184, 184, 0.344);
+}
+
+.fontSize {
+  font-size: 12px;
+  color: grey;
+}
+.fontSize1 {
+  font-size: 15px;
+  color: grey;
+  font-weight: 300;
+}
+.fontBold {
+  font-weight: bold;
+  color: black;
+}
+
+.bgWhite {
+  background-color: white !important;
+}
+
+.dRelative {
+  position: relative;
+}
+
+.dAbsolute {
+  position: absolute;
+}
+
+.lightShadow:hover {
+  box-shadow: 0px 0px 4px 2px rgb(224, 224, 224);
+}
+
+.shadowOnRightEdge {
+  box-shadow: 6px 0px 8px 0px rgb(222, 222, 222);
+  background-color: white !important;
+}
+
+.shadowOnBothEdge {
+  box-shadow: 6px 0px 8px 0px rgb(222, 222, 222),
+    -6px 0px 8px 0px rgb(222, 222, 222);
+  background-color: white !important;
+}
+
+.shadowOnLeftEdge {
+  box-shadow: -6px 0px 8px 0px rgb(222, 222, 222);
+  background-color: white !important;
+}
+#dropdown-basic {
+  background-color: transparent !important;
+  border-color: transparent !important;
+}

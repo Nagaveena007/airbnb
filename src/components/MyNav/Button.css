@@ -1,112 +1,182 @@
-:root {
-  --primary: #fff;
-}
-
-.btn {
-  padding: 8px 20px;
-  border-radius: 4px;
-  outline: none;
-  border: none;
+.search__btn {
+  border-radius: 2rem;
+  border-color: transparent;
+  background-color: #ff385c;
+  color: white;
   cursor: pointer;
-  white-space: nowrap;
+  font-size: 16px !important;
+  font-weight: 600 !important;
+  font-family: inherit !important;
+  line-height: 16px !important;
+  user-select: auto !important;
+  display: inline-flex !important;
+  padding: 12px !important;
+  position: relative !important;
+  z-index: 1 !important;
 }
-
-.btn--primary {
-  background-color: var(--primary);
-  color: #242424;
-  border: 1px solid var(--primary);
-}
-
-.btn--outline {
-  background-color: transparent;
-  color: #fff;
-  padding: 8px 20px;
-  border: 1px solid var(--primary);
-  transition: all 0.3s ease-out;
-}
-
-.btn--medium {
-  padding: 8px 20px;
-  font-size: 18px;
-}
-
-.btn--large {
-  padding: 12px 26px;
-  font-size: 20px;
-}
-
-.btn--mobile {
+.App {
   text-align: center;
-  border-radius: 4px;
-  width: 80%;
-  text-decoration: none;
-  font-size: 1.5rem;
-  background-color: transparent;
-  color: #fff;
-  padding: 14px 20px;
-  border: 1px solid #fff;
-  transition: all 0.3s ease-out;
 }
 
-.btn--wide {
-  padding: 12px 64px;
-  font-size: 20px;
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
 }
 
-.btn--large:hover,
-.btn--medium:hover,
-.btn--mobile:hover {
-  transition: all 0.3s ease-out;
-  background: #fff;
-  color: #242424;
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
 }
 
-.btn--wide:hover {
-  color: #fff;
-  background-color: #f00946;
-  transition: all 0.2s ease-out;
-}
-
-.btn-link {
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
-  text-decoration: none;
-  padding: 8px 16px;
-  height: 100%;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* from navbar */
+#dropdown-basic {
+  background-color: white;
+  color: black;
+  border-radius: 50px;
+}
+
+#dropdown-menu {
+  background-color: white;
+  width: 200px;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+#dropdown-basic::after {
+  display: none;
+}
+
+#dropdown-menu {
+  width: 250px !important;
+  left: -175px;
+}
+
+/* from searchbar */
+input {
+  border: none;
+  background-color: rgba(255, 255, 255, 0);
+}
+
+input:focus {
+  outline: none;
+}
+.roundedBorder {
+  border-radius: 50px;
+}
+
+div.roundedBorder:hover {
+  background-color: rgba(184, 184, 184, 0.344);
+}
+
+.fontSize {
+  font-size: 13px;
+  color: grey;
+}
+
+.fontBold {
+  font-weight: bold;
+  color: black;
+}
+
+.bgWhite {
+  background-color: white !important;
+}
+
+.dRelative {
+  position: relative;
+}
+
+.dAbsolute {
+  position: absolute;
+}
+
+.lightShadow:hover {
+  box-shadow: 0px 0px 4px 2px rgb(224, 224, 224);
+}
+
+.shadowOnRightEdge {
+  box-shadow: 6px 0px 8px 0px rgb(222, 222, 222);
+  background-color: white !important;
+}
+
+.shadowOnBothEdge {
+  box-shadow: 6px 0px 8px 0px rgb(222, 222, 222),
+    -6px 0px 8px 0px rgb(222, 222, 222);
+  background-color: white !important;
+}
+
+.shadowOnLeftEdge {
+  box-shadow: -6px 0px 8px 0px rgb(222, 222, 222);
+  background-color: white !important;
+}
+
+/* from jumbotron */
+.jumbotron {
+  background-color: blackß;
+  position: relative;
+  min-height: 100vh;
+}
+
+.jumboPoster h1 {
+  font-size: 100px;
+}
+
+.jumboPoster {
   width: 100%;
+  margin: auto;
+  border-radius: 20px;
+  z-index: 1;
 }
 
-.blue {
-  background-color: #276afb;
-  color: #fff;
-  border: none;
+/* cards */
+.MyCards {
+  margin-top: 100vh;
 }
 
-.red {
-  background-color: #f00946;
-  color: #fff;
-  border: none;
+/* from foooter */
+footer {
+  margin-top: 20px;
+  background-color: white;
+}
+footer li {
+  font-size: 15px;
+}
+footer li:first-of-type {
+  font-size: 15px;
+  font-weight: 600;
+  border-radius: 50px;
 }
 
-.primary {
-  background-color: #242424;
-  color: #fff;
-  border: none;
+.pointer {
+  cursor: pointer;
 }
 
-.primary:hover {
-  background-color: #fff;
-  color: #242424;
-  border: none;
-}
-
-.green {
-  background: #25ce4a;
-  color: #fff;
-  border: none;
-}
-
-.green:hover {
-  background-color: #242424;
+.hoverGrey:hover {
+  background-color: rgba(128, 128, 128, 0.11);
+  border-radius: 5px;
 }
